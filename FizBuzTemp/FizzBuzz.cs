@@ -13,5 +13,10 @@ namespace FizBuzTemp
 
             return string.Empty;
         }
+
+        public long ValidateFizzBuzznumber(long number)
+        {
+            return 0;
+        }
     }
 }
