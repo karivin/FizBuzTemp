@@ -104,5 +104,19 @@ namespace FizBuzTemp.Tests
             //Assert
             Assert.AreEqual(result, String.Empty);
         }
+
+        [TestMethod()]
+        public void IdentifyFizzBuzzTest_ValidNumberReturnFizzNumberDivisibleBy3()
+        {
+            //Arrange
+            long number = 9;
+            string result = String.Empty;
+
+            //Act
+            result = fbObj.IdentifyFizzBuzz(number);
+
+            //Assert
+            Assert.AreEqual(result, fbObj.Fizz);
+        }
     }
 }

@@ -8,10 +8,16 @@ namespace FizBuzTemp
 {
     public class FizzBuzz
     {
+
+        public string Fizz => "Fizz";
+        public string Buzz => "Buzz";
+
         public string IdentifyFizzBuzz(long number)
         {
             if(ValidateFizzBuzznumber(number) == -1)
              return string.Empty;
+            if (number%3 == 0)
+                return Fizz;
             return string.Empty;
         }
 
