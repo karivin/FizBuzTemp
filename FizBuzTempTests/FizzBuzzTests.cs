@@ -42,5 +42,20 @@ namespace FizBuzTemp.Tests
             Assert.IsTrue(number <= Int32.MaxValue);
             Assert.IsTrue(result != -1);
         }
+
+        [TestMethod()]
+        public void ValidateFizzBuzzNumber_ExpectNumberMoreThan10DigitReturnMinus1()
+        {
+            //Arrange
+            long number = 12345678910;
+            long result;
+
+            //Act
+            result = fbObj.ValidateFizzBuzznumber(number);
+
+            //Assert
+            Assert.IsTrue(number > Int32.MaxValue);
+            Assert.IsTrue(result == -1);
+        }
     }
 }
