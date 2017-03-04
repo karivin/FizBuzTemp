@@ -10,6 +10,7 @@ namespace FizBuzTemp
     {
         public string IdentifyFizzBuzz(long number)
         {
+
             return string.Empty;
         }
     }
