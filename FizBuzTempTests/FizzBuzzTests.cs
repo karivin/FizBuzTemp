@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rhino.Mocks;
 
 namespace FizBuzTemp.Tests
 {
@@ -13,7 +14,7 @@ namespace FizBuzTemp.Tests
     {
         private FizzBuzz fbObj = new FizzBuzz();
         Random r = new Random();
-
+        
         [TestMethod()]
         public void IdentifyFizzBuzzTest_ExpectReturnEmptyString()
         {
@@ -87,6 +88,22 @@ namespace FizBuzTemp.Tests
             Assert.IsTrue(number <= Int32.MaxValue);
             Assert.IsTrue(number > 0);
             Assert.AreEqual(number,result);
+        }
+
+        [TestMethod()]
+        public void IdentifyFizzBuzzTest_InvalidNumberReturnEmptyString()
+        {
+            //Arrange
+            long number = r.Next();
+            string result = String.Empty;
+            var mockFBObj = MockRepository.GenerateMock<IFizzBuzz>();
+            Expect.Call(mockFBObj.ValidateFizzBuzznumber(number)).Return(-1);
+
+            //Act
+            result = fbObj.IdentifyFizzBuzz(number);
+
+            //Assert
+            Assert.AreEqual(result, String.Empty);
         }
     }
 }
