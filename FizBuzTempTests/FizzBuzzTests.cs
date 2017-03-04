@@ -118,5 +118,19 @@ namespace FizBuzTemp.Tests
             //Assert
             Assert.AreEqual(result, fbObj.Fizz);
         }
+
+        [TestMethod()]
+        public void IdentifyFizzBuzzTest_ValidNumberReturnBuzzNumberDivisibleBy5()
+        {
+            //Arrange
+            long number = 10;
+            string result = String.Empty;
+
+            //Act
+            result = fbObj.IdentifyFizzBuzz(number);
+
+            //Assert
+            Assert.AreEqual(result, fbObj.Buzz);
+        }
     }
 }
