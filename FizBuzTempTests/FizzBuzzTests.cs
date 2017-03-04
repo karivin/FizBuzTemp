@@ -20,14 +20,14 @@ namespace FizBuzTemp.Tests
         public void IdentifyFizzBuzzTest_ExpectReturnEmptyString()
         {
             //Arrange
-            long number = r.Next();
+            long number = 1234;
             string result = String.Empty;
 
             //Act
             result = fbObj.IdentifyFizzBuzz(number);
             
             //Assert
-            Assert.AreEqual(result, String.Empty);
+            Assert.AreEqual(String.Empty, result);
         }
 
         [TestMethod()]
@@ -106,7 +106,7 @@ namespace FizBuzTemp.Tests
         }
 
         [TestMethod()]
-        public void IdentifyFizzBuzzTest_ValidNumberReturnFizzNumberDivisibleBy3()
+        public void IdentifyFizzBuzzTest_ValidNumberReturnFizzNumberMultipleOfy3()
         {
             //Arrange
             long number = 9;
@@ -120,7 +120,7 @@ namespace FizBuzTemp.Tests
         }
 
         [TestMethod()]
-        public void IdentifyFizzBuzzTest_ValidNumberReturnBuzzNumberDivisibleBy5()
+        public void IdentifyFizzBuzzTest_ValidNumberReturnBuzzNumberMultipleOf5()
         {
             //Arrange
             long number = 10;
@@ -131,6 +131,20 @@ namespace FizBuzTemp.Tests
 
             //Assert
             Assert.AreEqual(result, fbObj.Buzz);
+        }
+
+        [TestMethod()]
+        public void IdentifyFizzBuzzTest_ValidNumberReturnEmptyStringNumberNotMultipleOf3Or5()
+        {
+            //Arrange
+            long number = 11;
+            string result = String.Empty;
+
+            //Act
+            result = fbObj.IdentifyFizzBuzz(number);
+
+            //Assert
+            Assert.AreEqual(result, String.Empty);
         }
     }
 }

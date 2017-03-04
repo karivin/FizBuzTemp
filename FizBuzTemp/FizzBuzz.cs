@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FizBuzTemp
 {
-    public class FizzBuzz
+    public class FizzBuzz : IFizzBuzz
     {
 
         public string Fizz => "Fizz";

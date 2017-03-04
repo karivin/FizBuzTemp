@@ -1,4 +1,6 @@
-﻿namespace FizBuzTemp
+﻿using System;
+
+namespace FizBuzTemp
 {
     public interface IFizzBuzz
     {
