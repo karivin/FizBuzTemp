@@ -29,10 +29,10 @@ namespace FizBuzTemp.Tests
         }
 
         [TestMethod()]
-        public void ValidateFizzBuzzNumber_ExpectNumberMax10Digit()
+        public void ValidateFizzBuzzNumber_ExpectNumberMax32BitIntegerReturns()
         {
             //Arrange
-            long number = r.Next(Int32.MaxValue, Int32.MaxValue);
+            long number = r.Next(0, Int32.MaxValue);
             long result;
 
             //Act
@@ -44,7 +44,7 @@ namespace FizBuzTemp.Tests
         }
 
         [TestMethod()]
-        public void ValidateFizzBuzzNumber_ExpectNumberMoreThan10DigitReturnMinus1()
+        public void ValidateFizzBuzzNumber_ExpectNumberMoreThan32BitIntegerReturnMinus1()
         {
             //Arrange
             long number = 12345678910;
@@ -55,6 +55,21 @@ namespace FizBuzTemp.Tests
 
             //Assert
             Assert.IsTrue(number > Int32.MaxValue);
+            Assert.IsTrue(result == -1);
+        }
+
+        [TestMethod()]
+        public void ValidateFizzBuzzNumber_ExpectNumberLessThan0ReturnMinus1()
+        {
+            //Arrange
+            long number = -1;
+            long result;
+
+            //Act
+            result = fbObj.ValidateFizzBuzznumber(number);
+
+            //Assert
+            Assert.IsTrue(number < Int32.MinValue);
             Assert.IsTrue(result == -1);
         }
     }

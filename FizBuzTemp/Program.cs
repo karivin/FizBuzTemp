@@ -10,7 +10,7 @@ namespace FizBuzTemp
     {
         static void Main(string[] args)
         {
-            Console.Write("Please enter a number : ");
+            Console.Write("Please enter a positive number(max 32 bit integer) : ");
             Console.ReadLine();
         }
     }
