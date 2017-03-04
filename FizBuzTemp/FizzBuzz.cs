@@ -18,7 +18,7 @@ namespace FizBuzTemp
         {
             if (number < 0 || number > Int32.MaxValue)
                 return -1;
-            return 0;
+            return number;
         }
     }
 }
