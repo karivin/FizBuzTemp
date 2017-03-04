@@ -16,7 +16,7 @@ namespace FizBuzTemp
 
         public long ValidateFizzBuzznumber(long number)
         {
-            if (number > Int32.MaxValue)
+            if (number < 0 || number > Int32.MaxValue)
                 return -1;
             return 0;
         }

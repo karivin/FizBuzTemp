@@ -69,7 +69,7 @@ namespace FizBuzTemp.Tests
             result = fbObj.ValidateFizzBuzznumber(number);
 
             //Assert
-            Assert.IsTrue(number < Int32.MinValue);
+            Assert.IsTrue(number < 0);
             Assert.IsTrue(result == -1);
         }
     }
