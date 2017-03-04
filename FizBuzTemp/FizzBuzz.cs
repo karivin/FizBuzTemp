@@ -8,6 +8,9 @@ namespace FizBuzTemp
 {
     public class FizzBuzz
     {
+        public string IdentifyFizzBuzz(long number)
+        {
 
+        }
     }
 }

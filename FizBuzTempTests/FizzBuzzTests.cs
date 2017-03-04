@@ -11,10 +11,22 @@ namespace FizBuzTemp.Tests
     [TestClass()]
     public class FizzBuzzTests
     {
+        private FizzBuzz fbObj = new FizzBuzz();
+
         [TestMethod()]
-        public void IdentifyFizzBuzzTest()
+        public void IdentifyFizzBuzzTest_ExpectReturnEmptyString()
         {
-            Assert.Fail();
+            //Arrange
+            Random r = new Random();
+            long number = r.Next();
+            string result = String.Empty;
+
+            //Act
+            result = fbObj.IdentifyFizzBuzz(number);
+
+
+            //Assert
+            Assert.AreEqual(result, String.Empty);
         }
     }
 }
