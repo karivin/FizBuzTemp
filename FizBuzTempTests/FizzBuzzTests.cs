@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Rhino.Mocks;
+using Rhino.Mocks.Impl;
 
 namespace FizBuzTemp.Tests
 {
@@ -94,14 +95,12 @@ namespace FizBuzTemp.Tests
         public void IdentifyFizzBuzzTest_InvalidNumberReturnEmptyString()
         {
             //Arrange
-            long number = r.Next();
+            long number = -1;
             string result = String.Empty;
-            var mockFBObj = MockRepository.GenerateMock<IFizzBuzz>();
-            Expect.Call(mockFBObj.ValidateFizzBuzznumber(number)).Return(-1);
-
+           
             //Act
             result = fbObj.IdentifyFizzBuzz(number);
-
+            
             //Assert
             Assert.AreEqual(result, String.Empty);
         }

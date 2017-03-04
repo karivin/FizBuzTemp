@@ -10,11 +10,12 @@ namespace FizBuzTemp
     {
         public string IdentifyFizzBuzz(long number)
         {
-
+            if(ValidateFizzBuzznumber(number) == -1)
+             return string.Empty;
             return string.Empty;
         }
 
-        public long ValidateFizzBuzznumber(long number)
+        public virtual long ValidateFizzBuzznumber(long number)
         {
             if (number < 0 || number > Int32.MaxValue)
                 return -1;
