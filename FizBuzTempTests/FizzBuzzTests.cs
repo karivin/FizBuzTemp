@@ -23,8 +23,7 @@ namespace FizBuzTemp.Tests
 
             //Act
             result = fbObj.IdentifyFizzBuzz(number);
-
-
+            
             //Assert
             Assert.AreEqual(result, String.Empty);
         }
