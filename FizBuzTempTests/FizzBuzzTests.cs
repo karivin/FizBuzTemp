@@ -72,5 +72,21 @@ namespace FizBuzTemp.Tests
             Assert.IsTrue(number < 0);
             Assert.IsTrue(result == -1);
         }
+
+        [TestMethod()]
+        public void ValidateFizzBuzzNumber_ExpectNumberBetween0And32BitIntegerReturnSameNumber()
+        {
+            //Arrange
+            long number = r.Next(0,Int32.MaxValue);
+            long result;
+
+            //Act
+            result = fbObj.ValidateFizzBuzznumber(number);
+
+            //Assert
+            Assert.IsTrue(number <= Int32.MaxValue);
+            Assert.IsTrue(number > 0);
+            Assert.AreEqual(number,result);
+        }
     }
 }
