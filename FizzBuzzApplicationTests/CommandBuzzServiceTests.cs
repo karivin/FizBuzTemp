@@ -13,6 +13,7 @@ namespace FizzBuzzApplication.Tests
     {
         private ICommandService cmdService;
         private long number = 5;
+
         [TestMethod()]
         public void CanServiceFizzBuzzTest_NumberBuzz_ReturnTrue()
         {
@@ -25,6 +26,21 @@ namespace FizzBuzzApplication.Tests
 
             //Assert
             Assert.IsTrue(result);
+        }
+
+        [TestMethod()]
+        public void CanServiceFizzBuzzTest_NumberNotBuzz_ReturnFalse()
+        {
+            //Arrange
+            cmdService = new CommandBuzzService();
+            bool result;
+            number = 3;
+
+            //Act
+            result = cmdService.CanServiceFizzBuzz(number);
+
+            //Assert
+            Assert.IsFalse(result);
         }
 
         [TestMethod()]
