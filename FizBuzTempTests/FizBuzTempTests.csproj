@@ -59,12 +59,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FizBuzTemp\FizBuzTemp.csproj">
-      <Project>{D6AEE7A2-54F6-4D5F-80C8-2E416C997934}</Project>
-      <Name>FizBuzTemp</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>
