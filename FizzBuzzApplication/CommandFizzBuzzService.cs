@@ -1,23 +1,15 @@
 ﻿namespace FizzBuzzApplication
 {
-    internal abstract class CommandFizzBuzzService : ICommandFizzBuzzService
+    public class CommandFizzBuzzService : ICommandService
     {
-        protected CommandFizzBuzzService Service;
-        public abstract bool CanServiceFizzBuzz(long number);
-        public abstract string ServiceFizzBuzz(long number);
-
-        public string ProvideServiceFizzBuzz(long number)
+        public bool CanServiceFizzBuzz(long number)
         {
-            return CanServiceFizzBuzz(number) ? ServiceFizzBuzz(number) : Service.ProvideServiceFizzBuzz(number);
+            throw new System.NotImplementedException();
         }
 
-        public CommandFizzBuzzService SetService(CommandFizzBuzzService newService)
+        public string ServiceFizzBuzz(long number)
         {
-            if (Service == null)
-                Service = newService;
-            else
-                Service.SetService(newService);
-            return this;
+            throw new System.NotImplementedException();
         }
     }
 }

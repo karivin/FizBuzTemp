@@ -46,6 +46,7 @@
     <Compile Include="CommandFizzBuzzExecutor.cs" />
     <Compile Include="CommandFizzBuzzReceiver.cs" />
     <Compile Include="CommandFizzBuzzService.cs" />
+    <Compile Include="CommandService.cs" />
     <Compile Include="ICommandFizzBuzzExecutor.cs" />
     <Compile Include="ICommandFizzBuzzReceiver.cs" />
     <Compile Include="ICommandFizzBuzzService.cs" />

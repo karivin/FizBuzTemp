@@ -3,6 +3,8 @@
     public interface ICommandService
     {
         bool CanServiceFizzBuzz(long number);
-        string ServiceFizzBuzz();
+        string ServiceFizzBuzz(long number);
+        //string ProvideServiceFizzBuzz(long number);
     }
-}   
+}
+   

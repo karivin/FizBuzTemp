@@ -52,6 +52,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CommandFizzBuzzExecutorTests.cs" />
+    <Compile Include="CommandFizzBuzzServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
