@@ -1,22 +1,22 @@
-﻿namespace FizzBuzzApplication
+﻿using System.Linq;
+
+namespace FizzBuzzApplication
 {
     public class CommandFizzBuzzExecutor : ICommandFizzBuzzExecutor
     {
-        //private ICommandFizzBuzzService cmdFizzBuzzService;
-        private ICommandFizzBuzzReceiver cmdFizzBuzzReceiver;
+        private ICommandService cmdFizzBuzzService;
+        private readonly ICommandFizzBuzzReceiver cmdFizzBuzzReceiver;
 
         internal CommandFizzBuzzExecutor()
         {
             cmdFizzBuzzReceiver = new CommandFizzBuzzReceiver();
-           // cmdFizzBuzzService = cmdFizzBuzzReceiver.ReceiveFizzBuzzService();
-           
-
+            cmdFizzBuzzService = cmdFizzBuzzReceiver.ReceiveFizzBuzzService();
         }
 
 
-        public void ExecuteFizzBuzz(long number)
+        public string ExecuteFizzBuzz(long number)
         {
-            throw new System.NotImplementedException();
+            return cmdFizzBuzzReceiver.ReceiveFizzBuzzService().ProvideServiceFizzBuzz(number);
         }
     }
 }

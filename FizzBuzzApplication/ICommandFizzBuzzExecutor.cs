@@ -2,6 +2,6 @@
 {
     public interface ICommandFizzBuzzExecutor
     {
-        void ExecuteFizzBuzz(long number);
+        string ExecuteFizzBuzz(long number);
     }
 }

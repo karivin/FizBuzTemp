@@ -4,6 +4,6 @@ namespace FizzBuzzApplication
 {
     public interface ICommandFizzBuzzReceiver
     {
-        IEnumerable<ICommandFizzBuzzService> ReceiveFizzBuzzService();
+        CommandService ReceiveFizzBuzzService();
     }
 }
