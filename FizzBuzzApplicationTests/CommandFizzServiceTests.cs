@@ -17,7 +17,7 @@ namespace FizzBuzzApplication.Tests
         public void CanServiceFizzBuzzTest_NumberFizz_ReturnTrue()
         {
             //Arrange
-            cmdService = new CommandFizzBuzzService();
+            cmdService = new CommandFizzService();
             bool result;
 
             //Act
