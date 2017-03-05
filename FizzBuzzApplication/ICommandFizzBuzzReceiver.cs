@@ -1,7 +1,9 @@
-﻿namespace FizzBuzzApplication
+﻿using System.Collections.Generic;
+
+namespace FizzBuzzApplication
 {
     public interface ICommandFizzBuzzReceiver
     {
-        ICommandFizzBuzzService ReceiveCommandFizzBuzzService();
+        IEnumerable<ICommandFizzBuzzService> ReceiveFizzBuzzService();
     }
 }
