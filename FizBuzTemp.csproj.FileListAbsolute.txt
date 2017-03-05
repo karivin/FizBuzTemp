@@ -1,0 +1,6 @@
+G:\Projects\Job2017\FizBuzTemp\FizBuzTemp\bin\Debug\FizBuzTemp.exe.config
+G:\Projects\Job2017\FizBuzTemp\FizBuzTemp\bin\Debug\FizBuzTemp.exe
+G:\Projects\Job2017\FizBuzTemp\FizBuzTemp\bin\Debug\FizBuzTemp.pdb
+G:\Projects\Job2017\FizBuzTemp\FizBuzTemp\obj\Debug\FizBuzTemp.csprojResolveAssemblyReference.cache
+G:\Projects\Job2017\FizBuzTemp\FizBuzTemp\obj\Debug\FizBuzTemp.exe
+G:\Projects\Job2017\FizBuzTemp\FizBuzTemp\obj\Debug\FizBuzTemp.pdb
