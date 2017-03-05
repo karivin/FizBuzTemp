@@ -60,9 +60,17 @@ namespace FizzBuzzApplication.Tests
 
 
         [TestMethod()]
-        public void ServiceFizzBuzzTest()
+        public void ServiceFizzBuzzTest_ReturnEmptyString()
         {
-            Assert.Fail();
+            //Arrange
+            cmdService = new CommandFizzBuzzService();
+            string result;
+           
+            //Act
+            result = cmdService.ServiceFizzBuzz(number);
+
+            //Assert
+            Assert.AreEqual(String.Empty,result);
         }
     }
 }
