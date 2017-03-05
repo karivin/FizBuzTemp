@@ -11,7 +11,7 @@ namespace FizzBuzzApplication
 
         public override string ServiceFizzBuzz(long number)
         {
-            throw new NotImplementedException();
+            return String.Empty;
         }
     }
 }
