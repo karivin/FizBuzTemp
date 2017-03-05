@@ -12,15 +12,20 @@ namespace FizzBuzzApplication.Tests
     public class CommandFizzBuzzServiceTests
     {
         private ICommandService cmdService;
+        private long number = 1234;
+
         [TestMethod()]
         public void CanServiceFizzBuzzTest()
         {
            //Arrange
+           cmdService = new CommandFizzBuzzService();
+            bool result;
            
            //Act
+            result = cmdService.CanServiceFizzBuzz(number);
 
            //Assert
-           Assert.Fail();
+           Assert.IsTrue(result);
         }
 
         [TestMethod()]

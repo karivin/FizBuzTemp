@@ -2,10 +2,10 @@
 {
     public class CommandFizzBuzzExecutor : ICommandFizzBuzzExecutor
     {
-        private ICommandFizzBuzzService cmdFizzBuzzService;
+        //private ICommandFizzBuzzService cmdFizzBuzzService;
         private ICommandFizzBuzzReceiver cmdFizzBuzzReceiver;
 
-        private CommandFizzBuzzExecutor()
+        internal CommandFizzBuzzExecutor()
         {
             cmdFizzBuzzReceiver = new CommandFizzBuzzReceiver();
            // cmdFizzBuzzService = cmdFizzBuzzReceiver.ReceiveFizzBuzzService();
