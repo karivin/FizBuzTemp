@@ -13,6 +13,9 @@ namespace FizzBuzzApplication
             Console.Write("Please enter a positive number(max 32 bit integer) : ");
             long number = Convert.ToInt64(Console.ReadLine());
             //implement fizzbuzz functionality
+            //execute commandfizzbuzz
+            ICommandFizzBuzzExecutor cmdFizzBuzzExecutor = new CommandFizzBuzzExecutor();
+            cmdFizzBuzzExecutor.ExecuteFizzBuzz(number);
             Console.ReadKey();
         }
     }

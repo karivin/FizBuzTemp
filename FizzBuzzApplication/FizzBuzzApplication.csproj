@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandFizzBuzzExecutor.cs" />
+    <Compile Include="ICommandFizzBuzzExecutor.cs" />
+    <Compile Include="ICommandFizzBuzzReceiver.cs" />
+    <Compile Include="ICommandFizzBuzzService.cs" />
+    <Compile Include="ICommandService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
