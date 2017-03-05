@@ -7,6 +7,8 @@
         public abstract string ServiceFizzBuzz(long number);
         protected int Fizz => 3;
         protected int Buzz => 5;
+        protected string DisplayFizz => "Fizz";
+        protected string DisplayBuzz => "Buzz";
 
         public string ProvideServiceFizzBuzz(long number)
         {
