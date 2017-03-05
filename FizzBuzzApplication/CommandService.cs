@@ -11,12 +11,12 @@
         protected string DisplayBuzz => "Buzz";
 
         //Provide Service and if not found check for another service
-        public string ProvideServiceFizzBuzz(long number)
+        protected internal string ProvideServiceFizzBuzz(long number)
         {
             return CanServiceFizzBuzz(number) ? ServiceFizzBuzz(number) : Service.ProvideServiceFizzBuzz(number);
         }
 
-        public CommandService SetService(ICommandService newService)
+        protected internal CommandService SetService(ICommandService newService)
         {
             if (Service == null)
                 Service = (CommandService) newService;

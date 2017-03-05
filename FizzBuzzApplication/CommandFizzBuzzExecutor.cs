@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace FizzBuzzApplication
 {
@@ -6,17 +7,21 @@ namespace FizzBuzzApplication
     {
         private ICommandService cmdFizzBuzzService;
         private readonly ICommandFizzBuzzReceiver cmdFizzBuzzReceiver;
+        private readonly IValidateFizzBuzzNumber validateFizzBuzz;
 
-        internal CommandFizzBuzzExecutor()
+        internal CommandFizzBuzzExecutor(ICommandFizzBuzzReceiver cmdFizzBuzzReceiver, IValidateFizzBuzzNumber validateFizzBuzz)
         {
-            cmdFizzBuzzReceiver = new CommandFizzBuzzReceiver();
+            this.cmdFizzBuzzReceiver = cmdFizzBuzzReceiver;
             cmdFizzBuzzService = cmdFizzBuzzReceiver.ReceiveFizzBuzzService();
+            this.validateFizzBuzz = validateFizzBuzz;
         }
 
 
         public string ExecuteFizzBuzz(long number)
         {
-            return cmdFizzBuzzReceiver.ReceiveFizzBuzzService().ProvideServiceFizzBuzz(number);
+            if(validateFizzBuzz.ValidateFizzBuzznumber(number))
+                return cmdFizzBuzzReceiver.ReceiveFizzBuzzService().ProvideServiceFizzBuzz(number);
+            return String.Empty;
         }
     }
 }
