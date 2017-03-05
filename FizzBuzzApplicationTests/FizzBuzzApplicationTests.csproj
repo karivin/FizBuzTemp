@@ -51,6 +51,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CommandBuzzServiceTests.cs" />
     <Compile Include="CommandFizzBuzzExecutorTests.cs" />
     <Compile Include="CommandFizzBuzzServiceTests.cs" />
     <Compile Include="CommandFizzServiceTests.cs" />

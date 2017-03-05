@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandBuzzService.cs" />
     <Compile Include="CommandFizzBuzzExecutor.cs" />
     <Compile Include="CommandFizzBuzzReceiver.cs" />
     <Compile Include="CommandFizzBuzzService.cs" />
