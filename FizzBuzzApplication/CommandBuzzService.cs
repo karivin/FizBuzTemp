@@ -4,7 +4,7 @@
     {
         public override bool CanServiceFizzBuzz(long number)
         {
-            throw new System.NotImplementedException();
+            return (number%Buzz == 0);
         }
 
         public override string ServiceFizzBuzz(long number)
