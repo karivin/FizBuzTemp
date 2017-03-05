@@ -1,10 +1,12 @@
 ﻿namespace FizzBuzzApplication
 {
-    internal abstract class CommandService :ICommandService
+    public abstract class CommandService :ICommandService
     {
         protected CommandService Service;
         public abstract bool CanServiceFizzBuzz(long number);
         public abstract string ServiceFizzBuzz(long number);
+        protected int Fizz => 3;
+        protected int Buzz => 5;
 
         public string ProvideServiceFizzBuzz(long number)
         {

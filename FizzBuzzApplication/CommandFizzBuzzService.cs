@@ -1,15 +1,17 @@
-﻿namespace FizzBuzzApplication
+﻿using System;
+
+namespace FizzBuzzApplication
 {
-    public class CommandFizzBuzzService : ICommandService
+    public class CommandFizzBuzzService : CommandService, ICommandFizzBuzzService
     {
-        public bool CanServiceFizzBuzz(long number)
+        public override bool CanServiceFizzBuzz(long number)
         {
-            throw new System.NotImplementedException();
+            return (number%Fizz != 0 && number%Buzz != 0);
         }
 
-        public string ServiceFizzBuzz(long number)
+        public override string ServiceFizzBuzz(long number)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }
